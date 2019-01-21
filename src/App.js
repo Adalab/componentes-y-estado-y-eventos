@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles/App.scss';
-
-
+import Text from './component/Text';
 
 class App extends React.Component {
   constructor(props) {
@@ -24,8 +23,7 @@ class App extends React.Component {
   render() {
     return (
         <div className="app">
-          <input type="text" onKeyUp={this.handleKeyPress}/>
-          <p>{this.state.text}</p>
+         <Text handleKeyPress={this.handleKeyPress} text={this.state.text} />
         </div>
     );
   }
